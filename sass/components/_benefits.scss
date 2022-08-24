@@ -1,0 +1,53 @@
+.pictures__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+}
+
+.pictures__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pictures__item {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+// .benefits-item {
+//   width: calc ((100% - 90px)/4);
+// }
+
+.pictures__link {
+  // width: 270px;
+  height: 120px;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: #f5f4fa; */
+  background-color: var(--third-bgc-color);
+  border-radius: 4px;
+  /* outline: 2px solid; */
+}
