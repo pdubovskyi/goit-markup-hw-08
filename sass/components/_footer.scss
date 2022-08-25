@@ -12,10 +12,26 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 60px;
+    column-gap: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: flex-start;
+  }
 }
 
 .footer-address {
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .address__list {
@@ -48,9 +64,16 @@
 }
 
 .footer-soc {
-  // margin-left: 70px;
   justify-content: center;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-soc__title {
@@ -96,6 +119,11 @@
   // // margin-left: auto;
   // flex-basis: 50%;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    text-align: left;
+  }
 }
 
 .footer-email__text {
@@ -145,10 +173,21 @@
   gap: 12px;
   // flex-basis: 50%;
   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
 }
 
 .footer-btn {
-  min-width: 200px;
+  width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -167,6 +206,11 @@
   border: transparent;
   color: #ffffff;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    // margin-left: auto;
+    // margin-right: auto;
+  }
 
   &:focus,
   &:hover {

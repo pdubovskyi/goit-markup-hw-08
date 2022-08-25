@@ -726,9 +726,28 @@ body {
   justify-content: center;
   gap: 60px;
 }
+@media screen and (min-width: 768px) {
+  .container__footer {
+    row-gap: 60px;
+    column-gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container__footer {
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: flex-start;
+  }
+}
 
 .footer-address {
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    text-align: left;
+  }
 }
 
 .address__list {
@@ -761,6 +780,16 @@ body {
 .footer-soc {
   justify-content: center;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc {
+    margin-left: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc {
+    text-align: left;
+  }
 }
 
 .footer-soc__title {
@@ -800,6 +829,12 @@ body {
 
 .footer-email {
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-email {
+    margin-left: auto;
+    text-align: left;
+  }
 }
 
 .footer-email__text {
@@ -845,9 +880,22 @@ body {
   gap: 12px;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .footer-form {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
 
 .footer-btn {
-  min-width: 200px;
+  width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
