@@ -36,6 +36,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 /*--------------------BODY---------------------------*/
@@ -62,6 +63,21 @@ body {
 
 .header__logo {
   margin-right: 93px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.footer__logo__color--white {
+  color: var(--footer-logo-color);
 }
 
 .container {
@@ -183,6 +199,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1600px;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -566,7 +583,7 @@ body {
 }
 
 .team__item {
-  max-width: 100%;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -703,19 +720,15 @@ body {
   padding-bottom: 60px;
 }
 
-.footer__logo {
-  display: block;
-  margin-bottom: 20px;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.container__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
 }
 
-.footer__logo__color--white {
-  color: var(--footer-logo-color);
+.footer-address {
+  text-align: center;
 }
 
 .address__list {
@@ -745,20 +758,9 @@ body {
   color: var(--main-accent-color);
 }
 
-.footer__box {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-address {
-  flex-basis: 50%;
-}
-
 .footer-soc {
   justify-content: center;
-  flex-basis: 50%;
+  text-align: center;
 }
 
 .footer-soc__title {
@@ -797,8 +799,7 @@ body {
 }
 
 .footer-email {
-  margin-left: auto;
-  flex-basis: 50%;
+  text-align: center;
 }
 
 .footer-email__text {
@@ -813,7 +814,7 @@ body {
 
 .footer-input {
   height: 50px;
-  width: 358px;
+  width: 258px;
   padding-left: 15px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #2f303a;
@@ -822,6 +823,11 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 458px) {
+  .footer-input {
+    width: 358px;
+  }
 }
 .footer-input:focus {
   border-color: #2196f3;
@@ -837,6 +843,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .footer-btn {
