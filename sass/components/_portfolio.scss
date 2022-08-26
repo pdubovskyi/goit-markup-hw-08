@@ -1,8 +1,22 @@
 .filter__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 480px) {
+    justify-content: left;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 /* .filter-item {
@@ -16,7 +30,16 @@
 }
 
 .portfolio__item {
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
+  // flex-basis: calc((100% - 60px) / 3);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio__link {
@@ -26,13 +49,11 @@
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
-}
-
-
 
 .filter__btn {
   padding: 6px 22px;
@@ -54,16 +75,14 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-  color: var(--btn-text-color);
-  background-color: var(--main-accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    color: var(--btn-text-color);
+    background-color: var(--main-accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
-}
-
-
 
 /*------------------PORTFOLIO----------------*/
 
@@ -87,6 +106,16 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+.portfolio__content--padding {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 56px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 20px;
+  }
 }
 
 .portfolio__attachment {
@@ -113,9 +142,7 @@
   background-color: rgba(33, 150, 243, 0.9);
 
   .portfolio__link:hover &,
-.portfolio__link:focus & {
-  transform: translateY(0);
+  .portfolio__link:focus & {
+    transform: translateY(0);
+  }
 }
-}
-
-
