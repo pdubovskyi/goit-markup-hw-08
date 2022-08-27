@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    
-      <header class="header">
+    <header class="header">
       <div class="container header__flex">
         <nav class="nav">
           <a href="./index.html" class="logo logo__color--dark header__logo"
@@ -35,6 +34,14 @@
             <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
           </ul>
         </nav>
+
+        <button class="menu-open" type="button">
+          <svg class="menu-open__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        
         <ul class="contacts list">
           <li>
             <a class="contacts__link" href="mailto:info@devstudio.com">
@@ -54,7 +61,66 @@
           </li>
         </ul>
       </div>
+
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="wrap--top">
+            <button class="menu-close" type="button">
+              <svg class="menu-close__icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-nav list">
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-nav__item"><a class="mob-nav__link" href="">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="wrap--bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__item">
+                 <li class="mob-contacts__item">
+                <a class="mob-contacts__link" href="tel:+380961111111"> +38 096 111 11 11</a>
+              </li>
+                <a class="mob-contacts__link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+             
+            </ul>
+
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link mob-soc__link--border"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main>
       <section class="hero hero--padding">
         <div class="container hero__container">
@@ -63,7 +129,7 @@
             <span class="btn-hero__text">Замовити послугу</span>
           </button>
         </div>
-      </section> 
+      </section>
 
       <section class="section">
         <div class="container">
@@ -304,7 +370,7 @@
         </div>
       </section>
 
-     <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
 
@@ -358,7 +424,7 @@
 
     <footer class="footer">
       <div class="container container__footer">
-         <div class="footer-address">
+        <div class="footer-address">
           <a href="./index.html" class="footer__logo footer__logo__color--white"
             ><span class="logo__color">Web</span>Studio</a
           >
@@ -382,7 +448,7 @@
               </li>
             </ul>
           </address>
-        </div> 
+        </div>
 
         <div class="footer-soc">
           <p class="footer-soc__title">Присоединяйтесь</p>
@@ -437,10 +503,10 @@
           </form>
         </div>
       </div>
-    </footer> 
+    </footer>
 
     <!--BACKDROP-->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
@@ -509,6 +575,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-   
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
