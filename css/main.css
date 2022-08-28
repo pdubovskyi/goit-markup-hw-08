@@ -454,11 +454,11 @@ body {
 }
 
 .btn-hero {
-  padding: 10px 32px;
-  min-width: 216px;
+  padding: 10px 24px;
+  min-width: 200px;
   font-family: inherit;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
@@ -470,6 +470,16 @@ body {
 }
 .btn-hero:hover, .btn-hero:focus {
   background-color: var(--secondary-accent-color);
+}
+@media screen and (min-width: 480px) {
+  .btn-hero {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-hero {
+    padding: 10px 32px;
+  }
 }
 
 .visually-hidden {
