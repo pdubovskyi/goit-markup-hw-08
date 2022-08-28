@@ -74,10 +74,15 @@ body {
   margin-bottom: 20px;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    font-size: 26px;
+  }
 }
 
 .footer__logo__color--white {
@@ -110,8 +115,14 @@ body {
 
 .header {
   border-bottom: 1px solid #ececec;
-  /* padding-top: 25px;
-  padding-bottom: 25px; */
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .header__flex,
@@ -246,6 +257,7 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-menu > .container {
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -326,7 +338,7 @@ body {
 .mob-soc__link {
   display: block;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.22;
   padding-right: 10px;
   /* identical to box height, or 122% */
@@ -337,6 +349,11 @@ body {
   border-top: transparent;
   border-bottom: transparent;
   border-left: transparent;
+}
+@media screen and (min-width: 480px) {
+  .mob-soc__link {
+    font-size: 18px;
+  }
 }
 
 .mob-soc__link--border {
@@ -1175,6 +1192,7 @@ body {
 @media screen and (min-width: 768px) {
   .filter__list {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
