@@ -1,6 +1,10 @@
 .section {
   // background-color: var(--third-bgc-color);
 
+  &--bg-color {
+    background-color: var(--third-bgc-color);
+  }
+
   &__main-title {
     margin-bottom: 30px;
 

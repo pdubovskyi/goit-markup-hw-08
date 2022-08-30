@@ -179,8 +179,11 @@
 }
 
 .menu-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: block;
-  margin-left: auto;
+  // margin-left: auto;
   margin-bottom: 8px;
 
   border: transparent;
@@ -235,6 +238,12 @@
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    &--others {
+      font-size: 34px;
+      line-height: 1.17;
+      color: var(--main-accent-color);
+    }
 
     &:hover,
     &:focus {

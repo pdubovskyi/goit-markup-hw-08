@@ -275,8 +275,10 @@ body {
 }
 
 .menu-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: block;
-  margin-left: auto;
   margin-bottom: 8px;
   border: transparent;
   background-color: inherit;
@@ -326,6 +328,11 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
+.mob-contacts__link--others {
+  font-size: 34px;
+  line-height: 1.17;
+  color: var(--main-accent-color);
+}
 .mob-contacts__link:hover, .mob-contacts__link:focus {
   color: var(--main-accent-color);
   font-size: 34px;
@@ -373,8 +380,6 @@ body {
 
 .hero {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
   background-size: cover;
@@ -497,12 +502,18 @@ body {
 
 .pictures__title {
   margin-bottom: 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-text-color);
+}
+@media screen and (min-width: 768px) {
+  .pictures__title {
+    text-align: left;
+  }
 }
 
 .pictures__text {
@@ -826,6 +837,9 @@ body {
   color: var(--third-text-color);
 }
 
+.section--bg-color {
+  background-color: var(--third-bgc-color);
+}
 .section__main-title {
   margin-bottom: 30px;
   font-weight: 700;
@@ -992,6 +1006,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
+  align-items: baseline;
 }
 @media screen and (min-width: 768px) {
   .container__footer {
@@ -1191,7 +1206,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 480px) {
@@ -1243,6 +1257,11 @@ body {
 .portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.portfolio__link--change {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .filter__btn {
   padding: 6px 22px;
@@ -1289,13 +1308,17 @@ body {
   border-right: 1px solid #eeeeee;
 }
 
+.portfolio__content--grow {
+  flex-grow: 1;
+}
 @media screen and (min-width: 768px) {
-  .portfolio__content--padding {
-    padding-bottom: 56px;
+  .portfolio__content--grow {
+    padding-bottom: 20px;
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1200px) {
-  .portfolio__content--padding {
+  .portfolio__content--grow {
     padding-bottom: 20px;
   }
 }
